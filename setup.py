@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='pymulsim',
     version='0.1.0',    
-    description='A package for computing node similarities between multilayer networks, based on embeddings from Graph Neural Networks.',
+    description='A package for computing pairwise node similarities between multilayer networks, based on embeddings from Graph Neural Networks.',
     url='https://github.com/pietrocinaglia/pymulsim',
     author='Pietro Cinaglia',
     author_email='cinaglia@unicz.it',

@@ -4,6 +4,7 @@ Author: Pietro Cinaglia
 
 Description: A package for computing node similarities between multilayer networks by using embeddings via GNN.
 
+PyPi url: https://pypi.org/project/pymulsim/
 
 ### License
 
