@@ -10,15 +10,15 @@ from pymulsim import PyMulSim # pip install pymulsim
 
 ## Parameters (example)
 #
-workspace = './' # Replace with current folder's path
+workspace = '{{current_folder}}' # Replace this with current folder's path
 #
-source_path = workspace + 'dataset/synt50_1.txt'
-target_path = workspace + 'dataset/synt50_1.txt'
+source_path = workspace + 'dataset/synt50_noise10.txt'
+target_path = workspace + 'dataset/synt50_original.txt'
 #
 layer_ids = [1,2]
 interlayer_ids = [3]
 #
-model_type = 'GNN' # GNN or GIN
+model_type = 'GIN' # GNN or GIN
 channels = 64
 epochs = 0
 verbose = True # True: verbose; False: does not show information during computation.
