@@ -5,8 +5,8 @@ import torch.nn.functional as F
 import numpy as np
 import networkx as nx
 #
-from .Models import GNN, GIN
-from .Utils import read_data_from_file, read_data_from_nx
+from Models import GNN, GIN
+from Utils import read_data_from_file, read_data_from_nx
 
 class PyMulSim:
 
@@ -28,7 +28,7 @@ class PyMulSim:
       exit()
     
     if verbose: print(model)
-
+    
     sims = []   
     for layer_i in range(0, num_layers):
       if verbose: print("-- Processing Layer " + str(layer_i))
