@@ -9,8 +9,7 @@ import numpy as np
 
 """# Utils"""
 
-def __parse_nx_edgelist(path, layer_ids, intralayer_ids, in_channels=64, delimiter=" "):
-  graph = nx.read_edgelist( path, delimiter=delimiter, data=True )
+def __parse_nx_edgelist(graph, layer_ids, intralayer_ids, in_channels):
   graph_layers = []
 
   # Layers
@@ -71,12 +70,12 @@ def __graph_to_data(graph):
 # Reading data
 """
 
-def read_data_from_file(source_path:str, target_path:str, layer_ids:[], interlayer_ids:[], in_channels:int=64):
-  data_multi_graph1, graph1_node_labels, _ = __parse_nx_edgelist(source_path, layer_ids, interlayer_ids, in_channels)
-  data_multi_graph2, graph2_node_labels, _ = __parse_nx_edgelist(target_path, layer_ids, interlayer_ids, in_channels)
+def read_data_from_nx(graph1_layers:nx.Graph, graph2_layers:nx.Graph, layer_ids:[], interlayer_ids:[], in_channels:int):
+  data_multi_graph1, graph1_node_labels, _ = __parse_nx_edgelist(graph1_layers, layer_ids, interlayer_ids, in_channels)
+  data_multi_graph2, graph2_node_labels, _ = __parse_nx_edgelist(graph2_layers, layer_ids, interlayer_ids, in_channels)
   return data_multi_graph1, data_multi_graph2, graph1_node_labels, graph2_node_labels
 
-def read_data_from_nx(graph1_layers:nx.Graph, graph2_layers:nx.Graph):
-  data_multi_graph1, graph1_node_labels = __layers_to_data_list(graph1_layers)
-  data_multi_graph2, graph2_node_labels = __layers_to_data_list(graph2_layers)
-  return data_multi_graph1, data_multi_graph2, graph1_node_labels, graph2_node_labels
+def read_data_from_file(source_path:str, target_path:str, layer_ids:[], interlayer_ids:[], in_channels:int, delimiter:str=" "):
+  source = nx.read_edgelist( source_path, delimiter=delimiter, data=True )
+  target = nx.read_edgelist( target_path, delimiter=delimiter, data=True )
+  return read_data_from_nx(source, target, layer_ids, interlayer_ids, in_channels)
