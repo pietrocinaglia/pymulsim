@@ -56,7 +56,7 @@ Note that we made available a (toy) dataset (folder: 'dataset')and a related exa
 node_similarities = pymulsim.compute_similarities_from_file( source_path:(str), target_path:(str), layer_ids:(list), interlayer_ids:(list) )
 ```
 
-## Computing Similarities from NetworkX Graphs <a name="computing-similarities-from-networkx-graphs"></a>
+### Computing Similarities from NetworkX Graphs <a name="computing-similarities-from-networkx-graphs"></a>
 
 Alternatively, you can compute node similarities by using two multilayer networks modelled as a set of NetworkX (nx) objects.
 
