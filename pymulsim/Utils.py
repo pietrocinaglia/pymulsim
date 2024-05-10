@@ -7,6 +7,12 @@ from torch_geometric.data import Data
 import networkx as nx
 import numpy as np
 
+###
+# @author: Pietro Cinaglia
+# @mail: cinaglia (at) unicz (dot) it
+# @github: https://github.com/pietrocinaglia
+###
+
 """# Utils"""
 
 def __parse_nx_edgelist(graph, layer_ids, intralayer_ids, in_channels):

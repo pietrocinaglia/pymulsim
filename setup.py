@@ -1,5 +1,11 @@
 from setuptools import setup
 
+###
+# @author: Pietro Cinaglia
+# @mail: cinaglia (at) unicz (dot) it
+# @github: https://github.com/pietrocinaglia
+###
+
 setup(
     name='pymulsim',
     version='0.1.1',    

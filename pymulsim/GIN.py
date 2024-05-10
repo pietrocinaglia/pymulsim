@@ -4,6 +4,12 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch_geometric.nn import MessagePassing
 
+###
+# @author: Pietro Cinaglia
+# @mail: cinaglia (at) unicz (dot) it
+# @github: https://github.com/pietrocinaglia
+###
+
 """# GIN Model"""
 
 class GINLayer(MessagePassing):

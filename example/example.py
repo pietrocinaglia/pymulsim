@@ -1,5 +1,11 @@
 # -*- coding: utf-8 -*-
 
+###
+# @author: Pietro Cinaglia
+# @mail: cinaglia (at) unicz (dot) it
+# @github: https://github.com/pietrocinaglia
+###
+
 '''
 ' Example
 '

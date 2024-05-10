@@ -8,6 +8,12 @@ import networkx as nx
 from .GIN import GIN
 from .Utils import read_data_from_file, read_data_from_nx
 
+###
+# @author: Pietro Cinaglia
+# @mail: cinaglia (at) unicz (dot) it
+# @github: https://github.com/pietrocinaglia
+###
+
 class PyMulSim:
 
   def __init__(self, verbose=False):
